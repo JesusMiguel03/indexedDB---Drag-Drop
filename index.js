@@ -23,10 +23,12 @@ document.getElementById('add').addEventListener('click',()=> {
         if (document.querySelector(".posible") != undefined) {
             if (confirm("Hay elementos sin guardar: ¿Quieres continuar?")) {
                 addObjetos({nombre})
+                document.getElementById("name").value = ""
                 leerObjetos()
             }
          }else {
             addObjetos({nombre})
+            document.getElementById("name").value = ""
             leerObjetos()
         }
     }
